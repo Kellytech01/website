@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Read the latest insights, tech stories, and expert tips from Kelly Tech Concepts Ltd. Learn about web development, digital marketing, and personal journeys in tech.">
+  <meta name="keywords" content="Kelly Tech Concepts blog, tech blog Nigeria, web development stories, digital marketing tips, how I started tech, programming journey, SEO, content marketing, tech career">
+  <meta name="author" content="Kelly Tech Concepts Ltd">
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  
+  <script type="text/javascript">
+    var _smartsupp = _smartsupp || {};
+    _smartsupp.key = '335010f61d8c123d6b2a9061f286eb485e1678a0';
+    window.smartsupp||(function(d) {
+      var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+      s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+      c.type='text/javascript';c.charset='utf-8';c.async=true;
+      c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+    })(document);
+  </script>
+
+  <title> Blog | Kelly Tech Concepts Ltd – Tech Insights & Stories</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg-primary: #0a0f1c;
+      --bg-secondary: #111827;
+      --bg-elevated: #12182b;
+      --text-primary: #f1f5f9;
+      --text-secondary: #cbd5e6;
+      --text-muted: #94a3b8;
+      --border-light: #1e293b;
+      --card-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.5);
+      --hover-shadow: 0 25px 40px -16px rgba(0, 0, 0, 0.7);
+      --btn-primary-bg: #e2e8f0;
+      --btn-primary-text: #0f172a;
+      --footer-bg: #030712;
+      --footer-text: #9ca3af;
+      --accent-gradient: linear-gradient(135deg, #e2e8f0, #94a3b8);
+      --stat-bg: #111827;
+      --hero-overlay: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(15, 23, 42, 0.9));
+      --hero-text: #f8fafc;
+      --tech-bg: #1e293b;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: var(--bg-secondary); }
+    ::-webkit-scrollbar-thumb { background: #4a5b7a; border-radius: 8px; }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    
+    .top-bar {
+      background: #0f172a;
+      color: white;
+      padding: 10px 0;
+      font-size: 0.85rem;
+    }
+    .top-bar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .top-bar a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      background: #2563eb;
+      padding: 6px 16px;
+      border-radius: 30px;
+      transition: 0.2s;
+    }
+    .top-bar a:hover {
+      background: #1d4ed8;
+      transform: translateY(-2px);
+    }
+
+    
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(10, 15, 28, 0.92);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-light);
+      padding: 12px 0;
+    }
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .logo-img {
+      max-height: 48px;
+      width: auto;
+    }
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 500;
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      transition: 0.2s;
+    }
+    .nav-links a:hover { color: var(--text-primary); }
+    .menu-icon {
+      background: var(--bg-secondary);
+      border: none;
+      font-size: 1.2rem;
+      cursor: pointer;
+      padding: 8px 12px;
+      border-radius: 40px;
+      color: var(--text-primary);
+      display: none;
+    }
+
+    
+    .blog-header {
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      padding: 60px 0;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .blog-header h1 {
+      font-size: 3rem;
+      margin-bottom: 16px;
+    }
+    .blog-header p {
+      color: var(--text-muted);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    
+    .blog-posts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 40px;
+      margin: 40px 0;
+    }
+    .blog-post-card {
+      background: #0f172a;
+      border-radius: 28px;
+      overflow: hidden;
+      transition: 0.3s;
+      border: 1px solid #1e293b;
+    }
+    .blog-post-card:hover {
+      transform: translateY(-6px);
+      border-color: #2563eb;
+    }
+    .blog-post-img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+    }
+    .blog-post-content {
+      padding: 28px;
+    }
+    .blog-post-meta {
+      display: flex;
+      gap: 16px;
+      font-size: 0.85rem;
+      color: #94a3b8;
+      margin-bottom: 12px;
+    }
+    .blog-post-category {
+      background: #2563eb20;
+      color: #2563eb;
+      padding: 4px 12px;
+      border-radius: 30px;
+      font-size: 0.75rem;
+    }
+    .blog-post-title {
+      font-size: 1.5rem;
+      margin-bottom: 16px;
+      line-height: 1.3;
+    }
+    .blog-post-excerpt {
+      color: #cbd5e6;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .blog-post-keywords {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+    .keyword {
+      background: #1e293b;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 0.7rem;
+      color: #94a3b8;
+    }
+    .read-more-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #2563eb;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.2s;
+    }
+    .read-more-btn:hover {
+      background: #1d4ed8;
+      gap: 12px;
+    }
+
+    
+    .full-post {
+      display: none;
+      background: #0f172a;
+      border-radius: 32px;
+      padding: 40px;
+      margin: 40px 0;
+      border: 1px solid #1e293b;
+    }
+    .full-post.active {
+      display: block;
+    }
+    .full-post h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+    .full-post .post-meta {
+      color: #94a3b8;
+      margin-bottom: 24px;
+      font-size: 0.9rem;
+    }
+    .full-post .post-body {
+      line-height: 1.8;
+      color: #cbd5e6;
+    }
+    .full-post .post-body p {
+      margin-bottom: 20px;
+    }
+    .back-to-list {
+      background: none;
+      border: 1px solid #2563eb;
+      color: #2563eb;
+      padding: 8px 20px;
+      border-radius: 40px;
+      cursor: pointer;
+      margin-bottom: 20px;
+      transition: 0.2s;
+    }
+    .back-to-list:hover {
+      background: #2563eb;
+      color: white;
+    }
+
+    
+    footer {
+      background: var(--footer-bg);
+      color: var(--footer-text);
+      padding: 64px 0 32px;
+      border-radius: 40px 40px 0 0;
+      margin-top: 60px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 48px;
+    }
+    .social-icons a {
+      color: var(--footer-text);
+      font-size: 1.6rem;
+      margin-right: 16px;
+      transition: 0.2s;
+      text-decoration: none;
+    }
+    .social-icons a:hover { color: white; transform: translateY(-3px); }
+
+    
+    .floating-wa {
+      position: fixed;
+      bottom: 24px;
+      left: 24px;
+      z-index: 999;
+      background: #25D366;
+      color: white;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+    .floating-wa i { font-size: 28px; }
+    .floating-wa:hover { transform: scale(1.1); background: #25D366; }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .menu-icon { display: block; }
+      .nav-links.mobile-open {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background: var(--bg-elevated);
+        padding: 24px;
+        border-radius: 32px;
+        margin-top: 16px;
+      }
+      .container { padding: 0 20px; }
+      .blog-posts-grid { grid-template-columns: 1fr; }
+      .blog-header h1 { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="top-bar">
+  <div class="container">
+    <span>Welcome to Kelly Tech Concepts Ltd! We deliver innovative IT solutions, software development, and tech training.</span>
+    <a href="index.html#contact">Request a Quote</a>
+  </div>
+</div>
+
+<nav class="navbar">
+  <div class="container nav-container">
+    <div class="logo-area">
+      <a href="index.html"><img src="img/iccc.png" alt="Kelly Tech Concepts Ltd" class="logo-img"></a>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="index.html#featured">Work</a></li>
+      <li><a href="index.html#courses">Courses</a></li>
+      <li><a href="blog.html" style="color:#2563eb;">Blog</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+      <li><a href="index.html#faq">FAQ</a></li>
+    </ul>
+    <div class="menu-icon" id="menuToggle"><i class="fas fa-bars"></i></div>
+  </div>
+</nav>
+
+<div class="blog-header">
+  <div class="container">
+    <h1>📝 Our Blog</h1>
+    <p>Insights, tutorials, and stories from the Kelly Tech Concepts team, helping you grow in tech.</p>
+  </div>
+</div>
+
+<div class="container" id="blogContainer">
+  
+
+  <div class="blog-posts-grid" id="postsGrid">
+    
+    <div class="blog-post-card" data-post-id="1">
+      <img src="https://images.unsplash.com/photo-1513258496099-48168024aec0?w=600&h=400&fit=crop" alt="How I Went Into Tech" class="blog-post-img">
+      <div class="blog-post-content">
+        <div class="blog-post-meta">
+          <span><i class="far fa-calendar-alt"></i> Nov 15, 2025</span>
+          <span class="blog-post-category">Career Journey</span>
+        </div>
+        <h2 class="blog-post-title">How I Went Into Tech, From Curiosity to Career</h2>
+        <p class="blog-post-excerpt"> I became curious about how websites work after watching someone build one for my dad. I wanted to understand the brain behind it. That curiosity became my career. </p>
+        <div class="blog-post-keywords">
+          <span class="keyword">TechJourney</span>
+          <span class="keyword">WebDevelopment</span>
+          <span class="keyword">CareerChange</span>
+          <span class="keyword">CodingLife</span>
+        </div>
+        <button class="read-more-btn" data-id="1">Read Full Story </button>
+      </div>
+    </div>
+
+  
+    <div class="blog-post-card" data-post-id="2">
+      <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?w=600&h=400&fit=crop" alt="First Project" class="blog-post-img">
+      <div class="blog-post-content">
+        <div class="blog-post-meta">
+          <span><i class="far fa-calendar-alt"></i> Dec 10, 2021</span>
+          <span class="blog-post-category">Real Stories</span>
+        </div>
+        <h2 class="blog-post-title">My First Real Project, 2 Months into Tech</h2>
+        <p class="blog-post-excerpt">Just two months after writing my first line of code, I got my first paid job, an ecommerce website. I was terrified. But I learned more in those few days than in months of tutorials. </p>
+        <div class="blog-post-keywords">
+          <span class="keyword">FirstProject</span>
+          <span class="keyword">ClientWork</span>
+          <span class="keyword">BeginnerStruggles</span>
+          <span class="keyword">WebDesign</span>
+        </div>
+        <button class="read-more-btn" data-id="2">Read Full Story </button>
+      </div>
+    </div>
+
+    
+    <div class="blog-post-card" data-post-id="3">
+      <img src="https://images.unsplash.com/photo-1562577309-2592ab84b1bc?w=600&h=400&fit=crop" alt="Digital Marketing" class="blog-post-img">
+      <div class="blog-post-content">
+        <div class="blog-post-meta">
+          <span><i class="far fa-calendar-alt"></i> May 5, 2026</span>
+          <span class="blog-post-category">Marketing Tips</span>
+        </div>
+        <h2 class="blog-post-title">What is Digital Marketing & How It Has Helped Businesses Grow</h2>
+        <p class="blog-post-excerpt">Digital marketing isn't just about running ads, it's about building trust, visibility, and long-term engagement. In this post, I break down SEO, content marketing, social media strategies...</p>
+        <div class="blog-post-keywords">
+          <span class="keyword"> DigitalMarketing</span>
+          <span class="keyword"> SEO</span>
+          <span class="keyword"> BusinessGrowth</span>
+          <span class="keyword"> ContentStrategy</span>
+        </div>
+        <button class="read-more-btn" data-id="3">Read Full Story </button>
+      </div>
+    </div>
+  </div>
+
+  
+  <div id="fullPostArea"></div>
+</div>
+
+<footer>
+  <div class="container footer-grid">
+    <div><h3>Kelly Tech Concepts Ltd</h3><p>Design, build, and manage websites, apps, and IT systems, turning ideas into powerful digital experiences.</p></div>
+    <div><h4>Useful Links</h4><a href="index.html" style="color:var(--footer-text); display:block; text-decoration:none;">Home</a><a href="index.html#services" style="color:var(--footer-text); display:block; text-decoration:none;">Services</a><a href="index.html#contact" style="color:var(--footer-text); display:block; text-decoration:none;">Contact</a></div>
+    <div><h4>Follow Us</h4><div class="social-icons"><a href="#" style="text-decoration:none;"><i class="fab fa-tiktok"></i></a><a href="#" style="text-decoration:none;"><i class="fab fa-linkedin-in"></i></a><a href="#" style="text-decoration:none;"><i class="fab fa-x-twitter"></i></a><a href="#" style="text-decoration:none;"><i class="fab fa-whatsapp"></i></a></div></div>
+    <div><p>© 2026 Kelly Tech Concepts Ltd. All rights reserved.</p></div>
+  </div>
+</footer>
+
+<a href="https://wa.me/2347041785925?text=Good%20day%20Kelly%20Tech%20Concepts,%20I%20would%20like%20to%20make%20an%20enquiry%20about%20your%20services." class="floating-wa" target="_blank" rel="noopener noreferrer">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<script>
+  
+  const menuToggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+  menuToggle.addEventListener('click', () => navLinks.classList.toggle('mobile-open'));
+  document.querySelectorAll('#navLinks a').forEach(link => link.addEventListener('click', () => navLinks.classList.remove('mobile-open')));
+
+  
+  const posts = {
+    1: {
+      title: "How I Went Into Tech, From Curiosity to Career",
+      date: "Nov 15, 2025",
+      category: "Career Journey",
+      keywords: ["#TechJourney", "#WebDevelopment", "#CareerChange", "#CodingLife"],
+      fullContent: `
+        <p>It started with a simple curiosity, how do websites actually work? When I was younger, I watched someone build a website for my dad. I didn't understand the code, but I knew there was a mind behind it, someone who could turn nothing into something functional.</p>
+
+<p>That moment sparked a desire to learn. I wanted to understand the brain behind it. Not just click buttons or use templates, but truly know how a browser takes lines of text and turns them into a page that anyone in the world can visit.</p>
+
+<p>So I started with HTML. Then CSS. Then JavaScript. Late nights, broken layouts, tiny victories. Every error message taught me something. Every fixed bug felt like a superpower.</p>
+
+<p>What began as a question became a career. Today, I don't just wonder how websites work, I build them. And it all started because someone built something for my dad, and I had to know the brain behind it.</p>
+      `
+    },
+    2: {
+      title: "My First Real Project, 2 Months into Tech",
+      date: "Dec 10, 2021",
+      category: "Real Stories",
+      keywords: ["#FirstProject", "#ClientWork", "#BeginnerStruggles", "#WebDesign"],
+      fullContent: `
+       <p>Just two months after writing my first lines of HTML and CSS, I got my first ecommerce client, a local shop wanting to sell products online. I knew zero PHP, zero databases, and definitely zero WordPress. But I said yes anyway. I was terrified.</p>
+
+<p>The project seemed simple, product listings, a shopping cart, and a checkout. But with only static HTML and CSS in my toolkit, I had no idea how to handle payments or inventory. Every tutorial I found assumed I knew backend coding. I felt completely stuck.</p>
+
+<p>Then I found a YouTube tutorial titled "Build an Ecommerce Site with WordPress, No Coding Needed." That was my lifeline. I followed every step, paused at 2 AM, replayed sections five times. I learned to install WordPress, set up WooCommerce, and customize a theme using my existing CSS knowledge. The HTML I already understood helped me tweak page layouts without breaking things.</p>
+
+<p>On delivery day, my heart was pounding. But the client loved it. "It looks professional and it actually works," they said. That moment taught me that you don't need to know everything, you just need to know how to find the right tutorial and adapt what you already know.</p>
+
+<p>So to every newbie reading this, don't wait until you master back-end or JavaScript. Start with what you have, even HTML and CSS are enough to build on. WordPress and YouTube will take you the rest of the way.</p>
+      `
+    },
+    3: {
+      title: "What is Digital Marketing & How It Has Helped Businesses Grow",
+      date: "May 5, 2026",
+      category: "Marketing Tips",
+      keywords: ["#DigitalMarketing", "#SEO", "#BusinessGrowth", "#ContentStrategy"],
+      fullContent: `
+        <p>Digital marketing isn't just about running ads, it's about building trust, visibility, and long-term engagement. In this post, I break down SEO, content marketing, social media strategies, and how small businesses have doubled their revenue using the right digital tools.</p>
+        <p>When I first started learning digital marketing, I thought it was all about Facebook ads and Google AdWords. But the real power lies in organic reach. SEO (Search Engine Optimization) helps your website rank higher on Google without paying per click. Content marketing builds authority. Email marketing nurtures leads.</p>
+        <p>I worked with a local fashion brand that was struggling to get online sales. We optimized their product pages, started a blog about fashion tips, and engaged with their audience on Instagram. Within three months, their online revenue increased by 150%.</p>
+        <p>Another client, a tech startup, used our SEO strategy to rank for competitive keywords. They went from page 5 to page 1 in six months. Organic traffic became their main source of leads.</p>
+        <p>The lesson? Digital marketing works when you focus on value, not just promotion. Help your audience, and the sales will follow.</p>
+        <p>If you're a business owner, invest in SEO and content marketing. It's a long-term game, but the returns are sustainable and massive.</p>
+      `
+    }
+  };
+
+ 
+  function showFullPost(postId) {
+    const post = posts[postId];
+    if (!post) return;
+
+    const fullPostArea = document.getElementById('fullPostArea');
+    const postsGrid = document.getElementById('postsGrid');
+
+    
+    postsGrid.style.display = 'none';
+    fullPostArea.innerHTML = `
+      <div class="full-post active">
+        <button class="back-to-list" id="backToListBtn">← Back to all posts</button>
+        <h2>${post.title}</h2>
+        <div class="post-meta">
+          <span><i class="far fa-calendar-alt"></i> ${post.date}</span> | 
+          <span class="blog-post-category">${post.category}</span>
+        </div>
+        <div class="blog-post-keywords" style="margin-bottom: 20px;">
+          ${post.keywords.map(kw => `<span class="keyword">${kw}</span>`).join('')}
+        </div>
+        <div class="post-body">
+          ${post.fullContent}
+        </div>
+      </div>
+    `;
+
+    const backBtn = document.getElementById('backToListBtn');
+    backBtn.addEventListener('click', () => {
+      postsGrid.style.display = 'grid';
+      fullPostArea.innerHTML = '';
+      window.scrollTo({ top: document.getElementById('blogContainer').offsetTop - 80, behavior: 'smooth' });
+    });
+
+    window.scrollTo({ top: document.getElementById('blogContainer').offsetTop - 20, behavior: 'smooth' });
+  }
+
+  
+  document.querySelectorAll('.read-more-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const postId = btn.getAttribute('data-id');
+      showFullPost(postId);
+    });
+  });
+</script>
+</body>
+</html>
