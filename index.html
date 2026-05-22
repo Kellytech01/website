@@ -72,34 +72,7 @@
       padding: 0 32px;
     }
 
-    .top-bar {
-      background: #0f172a;
-      color: white;
-      padding: 10px 0;
-      font-size: 0.85rem;
-    }
-    .top-bar .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-    .top-bar a {
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-      background: #2563eb;
-      padding: 6px 16px;
-      border-radius: 30px;
-      transition: 0.2s;
-    }
-    .top-bar a:hover {
-      background: #1d4ed8;
-      transform: translateY(-2px);
-    }
-
-    
+    /* Hero Slider */
     .hero-slider {
       position: relative;
       overflow: hidden;
@@ -149,7 +122,6 @@
     .btn-primary, .btn-wa, .hero-buttons a {
       text-decoration: none !important;
     }
-    /* WhatsApp button stays green always */
     .btn-wa {
       background: #25D366;
       color: white;
@@ -223,7 +195,7 @@
       50% { opacity: 0; }
     }
 
-    
+    /* Navigation */
     .navbar {
       position: sticky;
       top: 0;
@@ -395,53 +367,6 @@
       color: var(--text-muted);
       font-style: italic;
     }
-
-    .featured-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 32px;
-    }
-    .project-card {
-      background: var(--bg-elevated);
-      border-radius: 28px;
-      overflow: hidden;
-      box-shadow: var(--card-shadow);
-      transition: 0.3s;
-    }
-    .project-card:hover { transform: translateY(-6px); }
-    .vertical-scroll-img {
-      position: relative;
-      height: 280px;
-      overflow-y: auto;
-      scrollbar-width: thin;
-      background: #1e293b;
-    }
-    .vertical-scroll-img img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-    .img-scroll-controls {
-      position: absolute;
-      right: 8px;
-      bottom: 8px;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-    .img-scroll-btn {
-      background: rgba(0,0,0,0.65);
-      backdrop-filter: blur(4px);
-      border: none;
-      color: white;
-      width: 32px;
-      height: 32px;
-      border-radius: 30px;
-      cursor: pointer;
-    }
-    .project-content { padding: 20px; }
-    .project-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
-    .project-tags span { background: #1e293b; padding: 4px 12px; border-radius: 30px; font-size: 0.75rem; color: #94a3b8; }
 
     .testimonials-grid {
       display: grid;
@@ -660,18 +585,27 @@
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 48px;
     }
-    .social-icons a {
+    .footer-links a {
       color: var(--footer-text);
-      font-size: 1.6rem;
-      margin-right: 16px;
-      transition: 0.2s;
       text-decoration: none;
+      display: block;
+      margin-bottom: 8px;
+      transition: 0.2s;
     }
-    .social-icons a:hover { color: white; transform: translateY(-3px); }
+    .footer-links a:hover { color: white; }
+    .services-offer-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 16px;
+      margin-top: 8px;
+    }
+    .services-offer-list span {
+      color: var(--footer-text);
+      font-size: 0.85rem;
+    }
 
     @media (max-width: 992px) {
       .services-grid, .courses-grid, .testimonials-grid, .blog-grid { grid-template-columns: repeat(2, 1fr); }
-      .featured-grid { grid-template-columns: repeat(2, 1fr); }
     }
     @media (max-width: 768px) {
       .nav-links { display: none; }
@@ -689,7 +623,6 @@
       .section-title { font-size: 1.8rem; }
       .container { padding: 0 20px; }
       .stats-grid { flex-direction: column; text-align: center; }
-      .featured-grid { grid-template-columns: 1fr; }
       .tech-grid { grid-template-columns: repeat(2, 1fr); }
       .contact-flex { flex-direction: column; }
       .testimonials-grid, .blog-grid { grid-template-columns: 1fr; }
@@ -704,19 +637,11 @@
     @media (max-width: 550px) {
       .services-grid, .courses-grid { grid-template-columns: 1fr; }
       .hero-slide .hero-content { padding: 40px 20px; }
-      .vertical-scroll-img { height: 240px; }
       .hero-buttons { flex-direction: column; align-items: flex-start; }
     }
   </style>
 </head>
 <body>
-
-<div class="top-bar">
-  <div class="container">
-    <span>Welcome to Kelly Tech Concepts Ltd! We deliver innovative IT solutions, software development, and tech training.</span>
-    <a href="#contact">Request a Quote</a>
-  </div>
-</div>
 
 <nav class="navbar">
   <div class="container nav-container">
@@ -725,7 +650,7 @@
     </div>
     <ul class="nav-links" id="navLinks">
       <li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#services">Services</a></li>
-      <li><a href="#featured">Work</a></li><li><a href="#courses">Courses</a></li>
+      <li><a href="#courses">Courses</a></li>
       <li><a href="blog.html">Blog</a></li>
       <li><a href="#contact">Contact</a></li>
       <li><a href="#faq">FAQ</a></li>
@@ -742,7 +667,7 @@
         <p>From web apps to enterprise systems, we deliver solutions tailored to your goals. Precision, performance, elegance.</p>
         <div class="hero-buttons">
           <a href="https://wa.me/2347041785925?text=Good%20day%20Kelly%20Tech%20Concepts,%20I%20would%20like%20to%20make%20an%20enquiry%20about%20your%20services." class="btn-primary btn-wa" target="_blank"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
-          <a href="#featured" class="btn-primary" style="background: white; color: #0f172a;">Explore Work</a>
+          <a href="#services" class="btn-primary" style="background: white; color: #0f172a;">Our Services</a>
         </div>
         <div class="typing-wrapper">
           <span class="typed-text"></span><span class="cursor">|</span>
@@ -755,7 +680,7 @@
         <p>We design and build scalable, secure, and user-friendly technology that powers growth.</p>
         <div class="hero-buttons">
           <a href="https://wa.me/2347041785925?text=Good%20day%20Kelly%20Tech%20Concepts,%20I%20would%20like%20to%20make%20an%20enquiry%20about%20your%20services." class="btn-primary btn-wa" target="_blank"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
-          <a href="#featured" class="btn-primary" style="background: white; color: #0f172a;">Explore Work</a>
+          <a href="#services" class="btn-primary" style="background: white; color: #0f172a;">Our Services</a>
         </div>
         <div class="typing-wrapper">
           <span class="typed-text"></span><span class="cursor">|</span>
@@ -768,7 +693,7 @@
         <p>Transform your ideas into world-class digital products with our expert team.</p>
         <div class="hero-buttons">
           <a href="https://wa.me/2347041785925?text=Good%20day%20Kelly%20Tech%20Concepts,%20I%20would%20like%20to%20make%20an%20enquiry%20about%20your%20services." class="btn-primary btn-wa" target="_blank"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
-          <a href="#featured" class="btn-primary" style="background: white; color: #0f172a;">Explore Work</a>
+          <a href="#services" class="btn-primary" style="background: white; color: #0f172a;">Our Services</a>
         </div>
         <div class="typing-wrapper">
           <span class="typed-text"></span><span class="cursor">|</span>
@@ -835,22 +760,6 @@
   </div>
 </section>
 
-<section id="featured">
-  <div class="container">
-    <div class="accent-line"></div>
-    <h2 class="section-title">Featured Work</h2>
-    <p>Each project includes a vertically scrollable preview, use the arrows to explore details.</p>
-    <div class="featured-grid" style="margin-top: 40px;">
-      <div class="project-card"><div class="vertical-scroll-img"><img src="img/eee.jpeg" alt="E-commerce"><div class="img-scroll-controls"><button class="img-scroll-btn up"><i class="fas fa-chevron-up"></i></button><button class="img-scroll-btn down"><i class="fas fa-chevron-down"></i></button></div></div><div class="project-content"><h3>E‑commerce Platform</h3><div class="project-tags"><span>WordPress</span><span>WooCommerce</span></div></div></div>
-      <div class="project-card"><div class="vertical-scroll-img"><img src="img/bby54.png" alt="Crypto"><div class="img-scroll-controls"><button class="img-scroll-btn up"><i class="fas fa-chevron-up"></i></button><button class="img-scroll-btn down"><i class="fas fa-chevron-down"></i></button></div></div><div class="project-content"><h3>Crypto Trading & Signals</h3><div class="project-tags"><span>PHP</span><span>MySQL</span><span>Python</span></div></div></div>
-      <div class="project-card"><div class="vertical-scroll-img"><img src="img/bblog.jpeg" alt="Blogging"><div class="img-scroll-controls"><button class="img-scroll-btn up"><i class="fas fa-chevron-up"></i></button><button class="img-scroll-btn down"><i class="fas fa-chevron-down"></i></button></div></div><div class="project-content"><h3>Multi-Category Blogging</h3><div class="project-tags"><span>Blogger</span><span>WordPress</span></div></div></div>
-      <div class="project-card"><div class="vertical-scroll-img"><img src="img/firstt.jpeg" alt="Dashboard"><div class="img-scroll-controls"><button class="img-scroll-btn up"><i class="fas fa-chevron-up"></i></button><button class="img-scroll-btn down"><i class="fas fa-chevron-down"></i></button></div></div><div class="project-content"><h3>Multi‑Asset Investment Research Suite</h3><div class="project-tags"><span>Angular</span><span>.NET Core / C#</span><span>D3</span></div></div></div>
-      <div class="project-card"><div class="vertical-scroll-img"><img src="img/secondc.jpeg" alt="Mobile App"><div class="img-scroll-controls"><button class="img-scroll-btn up"><i class="fas fa-chevron-up"></i></button><button class="img-scroll-btn down"><i class="fas fa-chevron-down"></i></button></div></div><div class="project-content"><h3>Forex Market Analyzer & Signal Hub</h3><div class="project-tags"><span>Vue.js</span><span>Bootstrap 5</span></div></div></div>
-      <div class="project-card"><div class="vertical-scroll-img"><img src="img/thirdc.jpeg" alt="Analytics"><div class="img-scroll-controls"><button class="img-scroll-btn up"><i class="fas fa-chevron-up"></i></button><button class="img-scroll-btn down"><i class="fas fa-chevron-down"></i></button></div></div><div class="project-content"><h3>Crypto Portfolio & Yield Optimizer</h3><div class="project-tags"><span>React </span><span>Node.js + Express</span></div></div></div>
-    </div>
-  </div>
-</section>
-
 <section id="courses">
   <div class="container">
     <div class="accent-line"></div>
@@ -896,40 +805,34 @@
   </div>
 </section>
 
-
 <section id="blog">
   <div class="container">
     <div class="accent-line"></div>
     <h2 class="section-title">Latest From Our Blog</h2>
     <p>Insights, stories, and tips from our tech journey.</p>
     <div class="blog-grid">
-      <!-- Blog 1 -->
       <div class="blog-card">
         <img src="https://images.unsplash.com/photo-1513258496099-48168024aec0?w=600&h=400&fit=crop" alt="Tech journey" class="blog-img">
         <div class="blog-content">
           <h3>How I Went Into Tech, From Curiosity to Career</h3>
           <p>I became curious about how websites work after watching someone build one for my dad. I wanted to understand the brain behind it. That curiosity became my career. In this post, I will share the struggles, the breakthroughs, and the mindset shift that turned a beginner into a professional developer.</p>
-          <a href="blog.html" class="read-more">Read More </a>
+          <a href="blog.html" class="read-more">Read More →</a>
         </div>
       </div>
-      
-
       <div class="blog-card">
         <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?w=600&h=400&fit=crop" alt="First project" class="blog-img">
         <div class="blog-content">
           <h3>My First Real Project, 2 Months into Tech</h3>
           <p>Just two months after writing my first line of code, I got my first paid job, an ecommerce website. I was terrified. But I learned more in those few days than in months of tutorials. From debugging at 2 AM to delivering a working site on time, here’s how I handled the pressure and what it taught me about real‑world development.</p>
-          <a href="blog.html" class="read-more">Read More </a>
+          <a href="blog.html" class="read-more">Read More →</a>
         </div>
       </div>
-      
-
       <div class="blog-card">
         <img src="https://images.unsplash.com/photo-1562577309-2592ab84b1bc?w=600&h=400&fit=crop" alt="Digital marketing" class="blog-img">
         <div class="blog-content">
           <h3>What is Digital Marketing & How It Has Helped Businesses Grow</h3>
           <p>Digital marketing isn't just about running ads, it's about building trust, visibility, and long-term engagement. In this post, I will break down SEO, content marketing, social media strategies, and how small businesses have doubled their revenue using the right digital tools. No fluff, just actionable insights.</p>
-          <a href="blog.html" class="read-more">Read More </a>
+          <a href="blog.html" class="read-more">Read More →</a>
         </div>
       </div>
     </div>
@@ -940,7 +843,7 @@
   <div class="remote-job">
     <h2>Are you skilled and in need of a remote job?</h2>
     <p>Reach out to us with what you can do, we connect talented tech professionals with global opportunities.</p>
-    <a href="#contact" class="btn-primary">Contact Us Now</a>
+    <a href="#contact" class="btn-primary">Contact Us Now </a>
   </div>
 </div>
 
@@ -983,10 +886,29 @@
 
 <footer>
   <div class="container footer-grid">
-    <div><h3>Kelly Tech Concepts Ltd</h3><p>Design, build, and manage websites, apps, and IT systems, turning ideas into powerful digital experiences.</p></div>
-    <div><h4>Useful Links</h4><a href="#" style="color:var(--footer-text); display:block; text-decoration:none;">Home</a><a href="#" style="color:var(--footer-text); display:block; text-decoration:none;">Services</a><a href="#" style="color:var(--footer-text); display:block; text-decoration:none;">Contact</a></div>
-    <div><h4>Follow Us</h4><div class="social-icons"><a href="#" style="text-decoration:none;"><i class="fab fa-tiktok"></i></a><a href="#" style="text-decoration:none;"><i class="fab fa-linkedin-in"></i></a><a href="#" style="text-decoration:none;"><i class="fab fa-x-twitter"></i></a><a href="#" style="text-decoration:none;"><i class="fab fa-whatsapp"></i></a></div></div>
-    <div><p>© 2026 Kelly Tech Concepts Ltd. All rights reserved.</p></div>
+    <div>
+      <h3>Kelly Tech Concepts Ltd</h3>
+      <p>Design, build, and manage websites, apps, and IT systems, turning ideas into powerful digital experiences.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Useful Links</h4>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#courses">Courses</a>
+      <a href="blog.html">Blog</a>
+      <a href="#contact">Contact</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <div>
+      <h4>Services We Offer</h4>
+      <div class="services-offer-list">
+        <span>Web Development</span> • <span>App Development</span> • <span>IT Services & Support</span> • <span>IT Training Courses</span> • <span>Content Writing</span> • <span>Software Engineering</span> • <span>Graphics & 3D Design</span> • <span>Digital Marketing</span> • <span>Research & Consultancy</span> • <span>Video Editing</span>
+      </div>
+    </div>
+    <div>
+      <p>© 2026 Kelly Tech Concepts Ltd. All rights reserved.</p>
+    </div>
   </div>
 </footer>
 
@@ -995,13 +917,11 @@
 </a>
 
 <script>
-  
   const menuToggle = document.getElementById('menuToggle');
   const navLinks = document.getElementById('navLinks');
   menuToggle.addEventListener('click', () => navLinks.classList.toggle('mobile-open'));
   document.querySelectorAll('#navLinks a').forEach(link => link.addEventListener('click', () => navLinks.classList.remove('mobile-open')));
 
-  
   const sections = document.querySelectorAll('section');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -1014,7 +934,6 @@
   }, { threshold: 0.15 });
   sections.forEach(section => observer.observe(section));
 
-  
   const techItems = document.querySelectorAll('.tech-item');
   const techObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -1027,7 +946,6 @@
   }, { threshold: 0.2 });
   techItems.forEach(t => techObserver.observe(t));
 
-  
   const stats = document.querySelectorAll('.stat-number');
   const statObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -1047,17 +965,6 @@
   }, { threshold: 0.5 });
   stats.forEach(s => statObserver.observe(s));
 
-  
-  document.querySelectorAll('.vertical-scroll-img').forEach(container => {
-    const up = container.querySelector('.up');
-    const down = container.querySelector('.down');
-    if (up && down) {
-      up.addEventListener('click', () => container.scrollBy({ top: -80, behavior: 'smooth' }));
-      down.addEventListener('click', () => container.scrollBy({ top: 80, behavior: 'smooth' }));
-    }
-  });
-
-  
   document.querySelectorAll('.faq-item').forEach(item => {
     const question = item.querySelector('.faq-question');
     question.addEventListener('click', () => {
@@ -1065,7 +972,6 @@
     });
   });
 
-  
   let slideIndex = 0;
   const slides = document.querySelectorAll('.hero-slide');
   const slidesContainer = document.getElementById('slidesContainer');
@@ -1091,7 +997,6 @@
   }
   setInterval(nextSlide, 5000);
 
-  
   const textToType = "Welcome to Kelly Tech Concepts Ltd! We deliver innovative IT solutions, software development, and tech training.";
   let typingTimeout;
   function resetTyping() {
@@ -1116,7 +1021,6 @@
   }
   resetTyping();
 
-  
   document.getElementById('contact-form')?.addEventListener('submit', (e) => {
     e.preventDefault();
     alert('Thank you! Our team will respond shortly.');
