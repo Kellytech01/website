@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Blog — Kelly Tech Concepts Ltd</title>
+<meta name="description" content="Read the latest insights, tech stories, and expert tips from Kelly Tech Concepts Ltd. Learn about web development, digital marketing, and personal journeys in tech.">
+<meta property="og:title" content="Blog — Kelly Tech Concepts Ltd">
+<meta property="og:description" content="Insights, stories, and tips from the Kelly Tech Concepts team.">
+ <meta name="keywords" content="Kelly Tech Concepts blog, tech blog Nigeria, web development stories, digital marketing tips, how I started tech, programming journey, SEO, content marketing, tech career">
+  <meta name="author" content="Kelly Tech Concepts Ltd">
+<link rel="icon" type="image/png" href="favicon.png">
+
+<script type="text/javascript">
+    var _smartsupp = _smartsupp || {};
+    _smartsupp.key = '335010f61d8c123d6b2a9061f286eb485e1678a0';
+    window.smartsupp||(function(d) {
+      var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+      s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+      c.type='text/javascript';c.charset='utf-8';c.async=true;
+      c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+    })(document);
+  </script>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1566148150924797" crossorigin="anonymous"></script>
+
+
+
+<meta property="og:image" content="https://kellytechconcepts.com/lologo.png">
+<meta name="theme-color" content="#0B1E4D">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+
+<style>
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --ink:#0E1B2C;
+  --ink-soft:#54607A;
+  --paper:#F7F8FB;
+  --paper-dim:#EDF0F7;
+  --line:#DCE1EB;
+  --blue:#1E56E8;
+  --blue-dark:#123FBF;
+  --blue-tint:#E9EFFE;
+  --navy:#0B1E4D;
+  --navy-soft:#142A5E;
+  --navy-line:rgba(255,255,255,.14);
+  --cyan:#4FE0E8;
+  --white:#FFFFFF;
+  --green:#25D366;
+  --green-dark:#1EBE57;
+  --radius-s:8px;
+  --radius-m:16px;
+  --maxw:1220px;
+  --font-sans:'IBM Plex Sans',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  --font-mono:'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+  --font-display:'Space Grotesk','IBM Plex Sans',system-ui,sans-serif;
+  --safe-l:env(safe-area-inset-left,0px);
+  --safe-r:env(safe-area-inset-right,0px);
+  --safe-b:env(safe-area-inset-bottom,0px);
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+body{
+  font-family:var(--font-sans);
+  color:var(--ink);
+  background:var(--paper);
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+  min-width:280px;
+}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+ul{list-style:none;}
+button{font:inherit;cursor:pointer;background:none;border:none;color:inherit;}
+h1,h2,h3,h4{font-weight:600;line-height:1.15;letter-spacing:-0.01em;}
+section{position:relative;}
+:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:3px;}
+.on-dark :focus-visible{outline-color:var(--cyan);}
+
+.grid-light{
+  background-image:
+    linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size:48px 48px;
+  background-position:-1px -1px;
+  background-color:var(--paper);
+}
+.grid-light.dim{background-color:var(--paper-dim);}
+.grid-dark{
+  background-color:var(--navy);
+  background-image:
+    linear-gradient(var(--navy-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--navy-line) 1px, transparent 1px);
+  background-size:48px 48px;
+  background-position:-1px -1px;
+  color:var(--white);
+}
+
+
+.wrap{max-width:var(--maxw);margin:0 auto;padding-left:calc(28px + var(--safe-l));padding-right:calc(28px + var(--safe-r));}
+.pad{padding:clamp(64px,10vw,104px) 0;}
+.tag-mono{font-family:var(--font-mono);font-size:12.5px;letter-spacing:.02em;color:var(--blue);background:var(--blue-tint);padding:4px 10px;border-radius:999px;white-space:nowrap;display:inline-block;}
+.on-dark .tag-mono{color:var(--cyan);background:rgba(79,224,232,.12);}
+
+
+.btn{display:inline-flex;align-items:center;gap:9px;padding:13px 24px;border-radius:999px;font-size:15px;font-weight:500;transition:transform .18s ease, box-shadow .18s ease, background .18s ease, border-color .18s ease;}
+.btn svg{width:18px;height:18px;flex:none;}
+.btn-primary{background:var(--blue);color:#fff;}
+.btn-primary:hover{background:var(--blue-dark);box-shadow:0 10px 24px -8px rgba(30,86,232,.55);transform:translateY(-1px);}
+.btn-ghost{border:1.5px solid var(--line);color:var(--ink);}
+.btn-ghost:hover{border-color:var(--blue);color:var(--blue);}
+.on-dark .btn-ghost{border-color:var(--navy-line);color:#fff;}
+.on-dark .btn-ghost:hover{border-color:var(--cyan);color:var(--cyan);}
+
+
+header{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:rgba(247,248,251,.82);
+  backdrop-filter:blur(16px) saturate(160%);-webkit-backdrop-filter:blur(16px) saturate(160%);
+  border-bottom:1px solid transparent;
+  transition:border-color .25s ease, box-shadow .25s ease, background .25s ease;
+  padding-left:var(--safe-l);padding-right:var(--safe-r);
+}
+header.scrolled{border-bottom-color:var(--line);box-shadow:0 6px 24px -18px rgba(14,27,44,.3);background:rgba(247,248,251,.92);}
+.nav-inner{max-width:var(--maxw);margin:0 auto;padding:0 28px;height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px;}
+.brand{display:flex;align-items:center;gap:11px;font-weight:600;font-size:17px;flex:none;}
+.brand-logo{width:auto;height:40px;max-width:52px;object-fit:contain;flex:none;}
+.brand-name{font-family:var(--font-display);font-weight:600;letter-spacing:-.01em;white-space:nowrap;}
+nav.primary-nav{display:flex;align-items:center;gap:clamp(16px,2.2vw,30px);}
+nav.primary-nav a{font-size:14.5px;color:var(--ink-soft);transition:color .15s ease;white-space:nowrap;}
+nav.primary-nav a:hover,nav.primary-nav a.active{color:var(--blue);}
+nav.primary-nav a.active{font-weight:600;}
+.header-actions{display:flex;align-items:center;gap:14px;flex:none;}
+.menu-toggle{display:none;width:42px;height:42px;align-items:center;justify-content:center;border-radius:10px;}
+.menu-toggle svg{width:22px;height:22px;}
+.mobile-panel{position:fixed;top:76px;left:0;right:0;bottom:0;background:var(--paper);z-index:99;padding:32px 28px calc(32px + var(--safe-b));transform:translateX(100%);transition:transform .3s cubic-bezier(.4,0,.2,1);overflow-y:auto;-webkit-overflow-scrolling:touch;}
+.mobile-panel.open{transform:translateX(0);}
+.mobile-panel a{display:block;padding:16px 0;font-size:clamp(17px,4.5vw,20px);border-bottom:1px solid var(--line);}
+.mobile-panel .btn{margin-top:28px;width:100%;justify-content:center;}
+
+
+.blog-hero{padding:clamp(130px,16vw,170px) 0 clamp(40px,6vw,64px);overflow:hidden;}
+.blog-hero::before{
+  content:'';position:absolute;top:-20%;right:-10%;width:min(560px,70vw);height:min(560px,70vw);
+  background:radial-gradient(circle at center,rgba(30,86,232,.08),transparent 65%);
+  pointer-events:none;z-index:0;
+}
+.blog-hero .wrap{position:relative;z-index:1;max-width:860px;}
+.blog-hero h1{
+  font-family:var(--font-display);
+  font-size:clamp(34px,6vw,64px);
+  line-height:1.05;
+  letter-spacing:-0.03em;
+  margin:20px 0 20px;
+  font-weight:700;
+  color:#0E1B2C;
+}
+.blog-hero p.lead{font-size:clamp(16px,1.9vw,19px);color:var(--ink-soft);max-width:60ch;}
+
+
+.blog-controls{padding:0 0 clamp(36px,5vw,56px);}
+.controls-inner{
+  display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;
+  padding:18px 22px;background:#fff;border:1px solid var(--line);border-radius:var(--radius-m);
+}
+.search-box{position:relative;flex:1;min-width:220px;max-width:420px;}
+.search-box svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);width:18px;height:18px;color:var(--ink-soft);pointer-events:none;}
+.search-box input{
+  width:100%;padding:12px 14px 12px 42px;border:1px solid var(--line);border-radius:999px;
+  font-size:14.5px;font-family:var(--font-sans);color:var(--ink);background:var(--paper);
+  transition:border-color .15s ease;
+}
+.search-box input:focus{outline:none;border-color:var(--blue);background:#fff;}
+.filter-row{display:flex;flex-wrap:wrap;gap:8px;}
+.filter-chip{
+  font-family:var(--font-mono);font-size:12.5px;
+  padding:8px 15px;border-radius:999px;border:1px solid var(--line);
+  background:#fff;color:var(--ink-soft);transition:.15s ease;white-space:nowrap;
+}
+.filter-chip:hover{border-color:var(--blue);color:var(--blue);}
+.filter-chip.active{background:var(--blue);color:#fff;border-color:var(--blue);}
+
+
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;}
+.blog-card{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius-m);overflow:hidden;
+  display:flex;flex-direction:column;
+  transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  cursor:pointer;
+}
+.blog-card:hover{transform:translateY(-4px);border-color:var(--blue);box-shadow:0 22px 40px -24px rgba(30,86,232,.3);}
+.blog-card-img{width:100%;height:210px;object-fit:cover;display:block;background:var(--paper-dim);}
+.blog-card-body{padding:24px 24px 26px;display:flex;flex-direction:column;gap:12px;flex:1;}
+.blog-card-meta{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+.blog-cat{font-family:var(--font-mono);font-size:11.5px;color:var(--blue);background:var(--blue-tint);padding:4px 10px;border-radius:999px;}
+.blog-date{font-family:var(--font-mono);font-size:11.5px;color:var(--ink-soft);}
+.blog-card h3{font-size:clamp(17px,2vw,20px);line-height:1.25;letter-spacing:-.01em;}
+.blog-card p{color:var(--ink-soft);font-size:14.5px;flex:1;}
+.blog-link{font-size:14px;font-weight:500;color:var(--blue);display:inline-flex;align-items:center;gap:6px;align-self:flex-start;}
+.blog-link svg{width:16px;height:16px;transition:transform .2s ease;}
+.blog-card:hover .blog-link svg{transform:translateX(4px);}
+
+
+.empty-state{
+  grid-column:1/-1;text-align:center;padding:64px 24px;
+  background:#fff;border:1px dashed var(--line);border-radius:var(--radius-m);
+}
+.empty-state svg{width:44px;height:44px;color:var(--ink-soft);margin:0 auto 16px;}
+.empty-state h3{font-size:18px;margin-bottom:6px;}
+.empty-state p{color:var(--ink-soft);font-size:14.5px;}
+
+
+#article-view{display:none;}
+#article-view.active{display:block;}
+#blog-list-view.hidden{display:none;}
+
+.article-hero{padding:clamp(120px,15vw,160px) 0 clamp(40px,6vw,64px);overflow:hidden;}
+.article-hero::before{
+  content:'';position:absolute;top:-15%;right:-10%;width:min(520px,60vw);height:min(520px,60vw);
+  background:radial-gradient(circle at center,rgba(30,86,232,.08),transparent 65%);
+  pointer-events:none;z-index:0;
+}
+.article-hero .wrap{position:relative;z-index:1;max-width:820px;}
+.back-link{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:var(--font-mono);font-size:13px;color:var(--blue);
+  padding:8px 14px;border:1px solid var(--line);border-radius:999px;background:#fff;
+  transition:.15s ease;margin-bottom:24px;
+}
+.back-link:hover{background:var(--blue);color:#fff;border-color:var(--blue);}
+.back-link svg{width:15px;height:15px;}
+.article-hero h1{
+  font-family:var(--font-display);
+  font-size:clamp(28px,5vw,52px);
+  line-height:1.1;letter-spacing:-0.03em;
+  margin:16px 0 20px;font-weight:700;
+}
+.article-meta{display:flex;align-items:center;gap:14px;flex-wrap:wrap;color:var(--ink-soft);font-size:14px;}
+.article-meta .dot{width:4px;height:4px;border-radius:50%;background:var(--ink-soft);opacity:.5;}
+.article-cover{
+  width:100%;height:auto;max-height:480px;object-fit:cover;
+  border-radius:var(--radius-m);margin:0 0 clamp(32px,5vw,48px);
+  border:1px solid var(--line);
+}
+.article-body{
+  max-width:720px;margin:0 auto;
+  padding:0 0 clamp(48px,7vw,80px);
+  font-size:clamp(15.5px,1.8vw,17.5px);
+  line-height:1.75;color:var(--ink);
+}
+.article-body p{margin-bottom:1.4em;}
+.article-body h2{
+  font-family:var(--font-display);
+  font-size:clamp(21px,2.6vw,28px);
+  margin:2em 0 .7em;letter-spacing:-.02em;
+}
+.article-body h3{font-size:clamp(18px,2.1vw,22px);margin:1.6em 0 .6em;}
+.article-body ul,.article-body ol{margin:0 0 1.4em 1.4em;padding-left:.4em;}
+.article-body ul li,.article-body ol li{margin-bottom:.6em;}
+.article-body blockquote{
+  border-left:3px solid var(--blue);
+  padding:6px 0 6px 22px;margin:1.8em 0;
+  font-style:italic;color:var(--ink-soft);
+  font-size:clamp(16px,1.9vw,19px);
+}
+.article-body strong{font-weight:600;color:var(--ink);}
+.article-body code{
+  font-family:var(--font-mono);font-size:.9em;
+  background:var(--blue-tint);color:var(--blue-dark);
+  padding:2px 7px;border-radius:5px;
+}
+.article-body a{color:var(--blue);border-bottom:1px solid var(--blue);padding-bottom:1px;}
+
+.article-cta{
+  max-width:720px;margin:0 auto clamp(56px,8vw,88px);
+  padding:clamp(28px,4vw,40px);
+  background:var(--navy);color:#fff;border-radius:var(--radius-m);
+  position:relative;overflow:hidden;
+}
+.article-cta::before{
+  content:'';position:absolute;top:-50%;right:-20%;width:min(360px,60vw);height:min(360px,60vw);
+  background:radial-gradient(circle at center,rgba(79,224,232,.18),transparent 65%);
+  pointer-events:none;
+}
+.article-cta h3{
+  font-family:var(--font-display);font-size:clamp(20px,2.6vw,26px);
+  color:#fff;margin-bottom:10px;position:relative;z-index:1;
+}
+.article-cta p{color:#C6D0E8;font-size:15px;margin-bottom:20px;position:relative;z-index:1;max-width:48ch;}
+.article-cta .btn{position:relative;z-index:1;}
+
+/* Related posts */
+.related-posts{padding:clamp(40px,6vw,72px) 0;background:var(--paper-dim);border-top:1px solid var(--line);}
+.related-posts h2{font-family:var(--font-display);font-size:clamp(22px,3vw,32px);margin-bottom:32px;letter-spacing:-.02em;}
+.related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
+
+
+.social-strip{background:var(--navy-soft);padding:clamp(48px,7vw,64px) 0;border-top:1px solid var(--navy-line);}
+.social-head{text-align:center;margin-bottom:32px;}
+.social-head h3{font-family:var(--font-display);color:#fff;font-size:clamp(20px,2.6vw,28px);letter-spacing:-.01em;margin-bottom:8px;}
+.social-head p{color:#9FB0D4;font-size:14.5px;}
+.social-row{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;}
+.social-btn{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:12px 22px;border-radius:999px;
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.14);
+  color:#E4E9F7;font-size:14px;font-weight:500;
+  transition:transform .18s ease, background .18s ease, border-color .18s ease, color .18s ease;
+}
+.social-btn svg{width:18px;height:18px;flex:none;}
+.social-btn:hover{transform:translateY(-2px);background:rgba(255,255,255,.12);border-color:rgba(79,224,232,.4);color:#fff;}
+.social-btn.facebook:hover{border-color:#1877F2;color:#1877F2;}
+.social-btn.instagram:hover{border-color:#E1306C;color:#E1306C;}
+.social-btn.x:hover{border-color:#fff;color:#fff;}
+.social-btn.linkedin:hover{border-color:#0A66C2;color:#0A66C2;}
+.social-btn.threads:hover{border-color:#fff;color:#fff;}
+.social-btn.telegram:hover{border-color:#229ED9;color:#229ED9;}
+
+
+footer{background:var(--navy);color:#fff;padding:clamp(48px,7vw,64px) 0 28px;border-top:1px solid var(--navy-line);}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:clamp(28px,4vw,40px);padding-bottom:44px;}
+.footer-brand-logo{height:44px;width:auto;max-width:60px;object-fit:contain;margin-bottom:14px;}
+.footer-brand .brand-name{font-family:var(--font-display);font-weight:600;font-size:17px;}
+.footer-brand p{color:#9FB0D4;font-size:14px;max-width:34ch;margin-top:10px;}
+.footer-col h4{font-size:13px;font-family:var(--font-mono);color:#7C8AB0;margin-bottom:16px;font-weight:500;}
+.footer-col a,.footer-col li{display:block;font-size:14.5px;color:#D3DAF0;padding:6px 0;}
+.footer-col a:hover{color:var(--cyan);}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;padding-top:26px;border-top:1px solid var(--navy-line);font-size:13px;color:#7C8AB0;}
+
+
+.whatsapp-fab{
+  position:fixed;bottom:calc(26px + var(--safe-b));left:calc(26px + var(--safe-l));z-index:90;
+  width:58px;height:58px;border-radius:50%;background:var(--green);color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 12px 28px -8px rgba(37,211,102,.6);
+  transition:transform .2s ease, background .2s ease;
+}
+.whatsapp-fab:hover{background:var(--green-dark);transform:scale(1.06);}
+.whatsapp-fab svg{width:30px;height:30px;}
+.whatsapp-fab::before{content:'';position:absolute;inset:0;border-radius:50%;background:var(--green);opacity:.5;animation:pulse-ring 2.4s ease-out infinite;z-index:-1;}
+@keyframes pulse-ring{0%{transform:scale(1);opacity:.5;}100%{transform:scale(1.7);opacity:0;}}
+.to-top{
+  position:fixed;bottom:calc(26px + var(--safe-b));right:calc(26px + var(--safe-r));z-index:90;
+  width:44px;height:44px;border-radius:50%;background:#fff;border:1px solid var(--line);
+  display:flex;align-items:center;justify-content:center;color:var(--ink);
+  opacity:0;pointer-events:none;transform:translateY(8px);
+  transition:opacity .2s ease, transform .2s ease;
+}
+.to-top.show{opacity:1;pointer-events:auto;transform:translateY(0);}
+.to-top svg{width:18px;height:18px;}
+
+
+@media (max-width:1100px){
+  nav.primary-nav{gap:18px;}
+  nav.primary-nav a{font-size:14px;}
+}
+@media (max-width:1024px){
+  .blog-grid{grid-template-columns:1fr 1fr;gap:26px;}
+  .related-grid{grid-template-columns:1fr 1fr;}
+  .footer-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:900px){
+  nav.primary-nav{display:none;}
+  .menu-toggle{display:flex;}
+}
+@media (max-width:680px){
+  .wrap{padding-left:calc(20px + var(--safe-l));padding-right:calc(20px + var(--safe-r));}
+  .nav-inner{padding:0 20px;height:70px;}
+  .mobile-panel{top:70px;}
+  .brand-logo{height:36px;}
+  .brand-name{font-size:15px;}
+  .blog-grid{grid-template-columns:1fr;}
+  .related-grid{grid-template-columns:1fr;}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:28px;}
+  .blog-card-img{height:190px;}
+  .controls-inner{padding:14px 16px;gap:12px;}
+  .search-box{max-width:100%;}
+  .whatsapp-fab{width:54px;height:54px;bottom:calc(20px + var(--safe-b));left:calc(20px + var(--safe-l));}
+  .whatsapp-fab svg{width:27px;height:27px;}
+  .to-top{width:42px;height:42px;bottom:calc(20px + var(--safe-b));right:calc(20px + var(--safe-r));}
+}
+@media (max-width:400px){
+  .wrap{padding-left:calc(16px + var(--safe-l));padding-right:calc(16px + var(--safe-r));}
+  .brand-name{display:none;}
+  .blog-hero h1{font-size:clamp(28px,8vw,38px);}
+  .btn{padding:12px 18px;font-size:14px;}
+  .footer-grid{grid-template-columns:1fr;}
+  .social-btn{padding:10px 14px;font-size:13px;flex:1 1 44%;justify-content:center;}
+  .social-btn span{display:none;}
+  .social-btn svg{width:20px;height:20px;}
+}
+@media (max-width:320px){
+  .wrap{padding-left:calc(14px + var(--safe-l));padding-right:calc(14px + var(--safe-r));}
+  .blog-hero h1{font-size:26px;}
+  .whatsapp-fab{width:50px;height:50px;}
+  .whatsapp-fab svg{width:24px;height:24px;}
+  .to-top{width:38px;height:38px;}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;}
+  html{scroll-behavior:auto;}
+}
+</style>
+</head>
+<body>
+
+
+<header id="site-header">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <img src="lologo.png" alt="Kelly Tech Concepts Ltd" class="brand-logo">
+      <span class="brand-name">Kelly Tech Concepts Ltd </span>
+    </a>
+    <nav class="primary-nav">
+      <a href="index.html#services">Services</a>
+      <a href="index.html#journey">Journey</a>
+      <a href="index.html#training">Training</a>
+      <a href="index.html#stores">Gadgets</a>
+      <a href="index.html#reviews">Reviews</a>
+      <a href="blog.html" class="active">Blog</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a class="btn btn-primary" href="https://wa.me/2347041785925?text=Good%20day%20Kelly%20Tech%20Concepts%2C%20I%20would%20like%20to%20make%20an%20enquiry%20about%20your%20services." target="_blank" rel="noopener" id="header-whatsapp">
+        <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.7" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 1 1 3.2 6.4L4 20l1.4-3.6A7.9 7.9 0 0 1 4 12Z"/></svg>
+        <span class="hide-sm">Chat with us</span>
+      </a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg id="menu-icon" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.7" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-panel" id="mobile-panel">
+  <a href="index.html#services">Services</a>
+  <a href="index.html#journey">Journey</a>
+  <a href="index.html#training">Training</a>
+  <a href="index.html#stores">Gadgets</a>
+  <a href="index.html#reviews">Reviews</a>
+  <a href="blog.html">Blog</a>
+  <a href="index.html#faq">FAQ</a>
+  <a href="index.html#contact">Contact</a>
+  <a class="btn btn-primary" href="https://wa.me/2347041785925?text=Good%20day%20Kelly%20Tech%20Concepts%2C%20I%20would%20like%20to%20make%20an%20enquiry%20about%20your%20services." target="_blank" rel="noopener">Chat on WhatsApp</a>
+</div>
+
+<main>
+
+
+<div id="blog-list-view">
+
+  
+  <section class="blog-hero grid-light">
+    <div class="wrap">
+      <span class="tag-mono">INSIGHTS</span>
+      <h1>Stories, ideas &amp; lessons from our tech journey.</h1>
+      <p class="lead">Real experiences from building, learning, and growing with technology, written for anyone curious about a career or business in tech.</p>
+    </div>
+  </section>
+
+
+
+ 
+  <section class="blog-controls">
+    <div class="wrap">
+      <div class="controls-inner">
+        <div class="search-box">
+          <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <input type="search" id="search-input" placeholder="Search articles..." aria-label="Search articles">
+        </div>
+        <div class="filter-row" id="filter-row">
+          <button class="filter-chip active" data-category="All">All</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="pad" style="padding-top:0;">
+    <div class="wrap">
+      <div class="blog-grid" id="blog-grid"></div>
+    </div>
+  </section>
+
+</div>
+
+
+<div id="article-view">
+
+  
+  <section class="article-hero grid-light">
+    <div class="wrap">
+      <a href="blog.html" class="back-link" id="back-to-blog">
+        <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Back to blog
+      </a>
+      <div class="article-meta">
+        <span class="blog-cat" id="article-cat">Category</span>
+        <span class="dot"></span>
+        <span id="article-date">Date</span>
+        <span class="dot"></span>
+        <span id="article-read">5 min read</span>
+      </div>
+      <h1 id="article-title">Article title</h1>
+    </div>
+  </section>
+
+  
+  <article class="wrap">
+    <img id="article-cover" class="article-cover" src="" alt="">
+    <div class="article-body" id="article-body"></div>
+
+   
+    <div class="article-cta">
+      <h3>Need help building something like this?</h3>
+      <p>We design, build, and manage the technology behind real business growth. Let's talk about your idea.</p>
+      <a class="btn btn-primary" href="https://wa.me/2347041785925?text=Hi%20Kelly%20Tech%20Concepts%2C%20I%20read%20your%20blog%20and%20I%27d%20like%20to%20talk." target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.7" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 1 1 3.2 6.4L4 20l1.4-3.6A7.9 7.9 0 0 1 4 12Z"/></svg>
+        Chat with us on WhatsApp
+      </a>
+    </div>
+  </article>
+
+ 
+  <section class="related-posts">
+    <div class="wrap">
+      <h2>Continue reading</h2>
+      <div class="related-grid" id="related-grid"></div>
+    </div>
+  </section>
+
+</div>
+
+</main>
+
+
+<section class="social-strip">
+  <div class="wrap">
+    <div class="social-head">
+      <h3>Follow the journey</h3>
+      <p>Connect with Kelly Tech Concepts across our social platforms.</p>
+    </div>
+    <div class="social-row">
+      <a class="social-btn facebook" href="https://www.facebook.com/share/18bevzTcNN/" target="_blank" rel="noopener" aria-label="Facebook">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.7l-.4 2.9h-2.3v7A10 10 0 0 0 22 12Z"/></svg>
+        <span>Facebook</span>
+      </a>
+      <a class="social-btn instagram" href="https://www.instagram.com/kellytechconcepts_?stkn=MWg2b3NxeThoOHloMQ%3D%3D" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
+        <span>Instagram</span>
+      </a>
+      <a class="social-btn x" href="https://x.com/ktechconcepts" target="_blank" rel="noopener" aria-label="X (Twitter)">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-6.9 7.9L23 22h-6.7l-5-6.6L5.7 22H2.5l7.4-8.4L1.5 2h6.8l4.5 6 5.6-6Zm-1.2 18h1.8L7.4 3.9H5.5L17.7 20Z"/></svg>
+        <span>X</span>
+      </a>
+      <a class="social-btn linkedin" href="https://www.linkedin.com/company/kelly-tech-concepts-ltd/" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.7h.1c.5-1 1.8-2 3.7-2 4 0 4.7 2.6 4.7 6V21h-4v-5.3c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9V21h-4V9Z"/></svg>
+        <span>LinkedIn</span>
+      </a>
+      <a class="social-btn threads" href="https://www.threads.com/@kellytechconcepts_" target="_blank" rel="noopener" aria-label="Threads">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12.5 21c-4.5 0-8-3.3-8-9s3.5-9 8-9c4 0 7 2.2 7.5 6"/><path d="M15.5 12.5c0-2-1.5-3.5-3.5-3.5s-3.5 1.3-3.5 3c0 1.6 1.2 2.7 3 2.7 2.5 0 4-1.8 4-4.5"/><path d="M19 10.5c.4 1.3.5 2.6.5 3.5 0 3.5-2.5 5.5-6.5 5.5"/></svg>
+        <span>Threads</span>
+      </a>
+      <a class="social-btn telegram" href="http://t.me/kellytechconcepts" target="_blank" rel="noopener" aria-label="Telegram">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.8 4.2 2.9 11.5c-1.1.4-1.1 1.1-.2 1.4l4.8 1.5 1.8 5.6c.2.6.4.8.9.8.4 0 .6-.2.9-.5l2.3-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3-14.1c.3-1.2-.5-1.8-1-1.5ZM9.5 14.2l-.4 4.1-1.4-4.3 9.5-6-7.7 6.2Z"/></svg>
+        <span>Telegram</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="lologo.png" alt="Kelly Tech Concepts Ltd" class="footer-brand-logo">
+        <div class="brand-name">Kelly Tech Concepts Ltd</div>
+        <p>Building technology that moves businesses forward.</p>
+      </div>
+      <div class="footer-col">
+        <h4>SITE</h4>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#journey">Journey</a>
+        <a href="index.html#training">Training</a>
+        <a href="index.html#stores">Gadgets</a>
+        <a href="index.html#reviews">Reviews</a>
+        <a href="blog.html">Blog</a>
+        <a href="index.html#faq">FAQ</a>
+      </div>
+      <div class="footer-col">
+        <h4>SERVICES</h4>
+        <ul>
+          <li>Software &amp; Web Dev</li>
+          <li>Mobile Apps</li>
+          <li>AI &amp; Automation</li>
+          <li>Cloud &amp; Security</li>
+          <li>Marketing &amp; Analytics</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>CONTACT</h4>
+        <a href="tel:+2347041785925">+234 704 178 5925</a>
+        <a href="mailto:kellytechconcepts@gmail.com">kellytechconcepts@gmail.com</a>
+        <span style="display:block;font-size:14.5px;color:#D3DAF0;padding:6px 0;">Abuja, Nigeria.</span>
+        <a href="https://wa.me/2347041785925" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Kelly Tech Concepts Ltd. All rights reserved.</span>
+      <span>Build → Automate → Secure → Market → Analyze → Scale</span>
+    </div>
+  </div>
+</footer>
+
+<a class="whatsapp-fab" href="https://wa.me/2347041785925?text=Good%20day%20Kelly%20Tech%20Concepts%2C%20I%20would%20like%20to%20make%20an%20enquiry%20about%20your%20services." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4 0 1.4 1 2.8 1.2 3 .1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3ZM12 21.5c-1.7 0-3.3-.5-4.7-1.3L3 21.5l1.4-4.2A9.5 9.5 0 1 1 12 21.5Zm0-20.8C6.7.7 2.4 5 2.4 10.3c0 1.7.4 3.4 1.2 4.9L2 22l6.9-1.8c1.4.8 3 1.2 4.6 1.2h.5c5.3 0 9.6-4.3 9.6-9.6S17.3.7 12 .7Z"/></svg>
+</a>
+<button class="to-top" id="to-top" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+</button>
+
+<script>
+
+const blogPosts = [
+
+
+
+
+  {
+    id: "into-tech",
+    title: "How I went into tech, from curiosity to career",
+    category: "Career",
+    date: "Nov 15, 2025",
+    readTime: "6 min read",
+    cover: "https://images.unsplash.com/photo-1513258496099-48168024aec0?w=1200&q=80&auto=format&fit=crop",
+    excerpt: "A curiosity about how websites work turned into a career. The struggles, the breakthroughs, and the mindset shift from beginner to professional developer.",
+    content: `
+      <p>It started with a simple curiosity, how do websites actually work? When I was younger, I watched someone build a website for my dad. I didn't understand the code, but I knew there was a mind behind it, someone who could turn nothing into something functional.</p>
+        <p>That moment sparked a desire to learn. I wanted to understand the brain behind it. Not just click buttons or use templates, but truly know how a browser takes lines of text and turns them into a page that anyone in the world can visit.</p>
+        <p>So I started with HTML. Then CSS. Then JavaScript. Late nights, broken layouts, tiny victories. Every error message taught me something. Every fixed bug felt like a superpower.</p>
+        <p>What began as a question became a career. Today, I don't just wonder how websites work, I build them. And it all started because someone built something for my dad, and I had to know the brain behind it.</p>
+      
+    `
+  },
+
+  {
+    id: "first-project",
+    title: "My first real project, two months into tech",
+    category: "Practical Insights",
+    date: "Dec 10, 2021",
+    readTime: "5 min read",
+    cover: "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?w=1200&q=80&auto=format&fit=crop",
+    excerpt: "Two months after writing the first line of code, the first paid job landed, an e-commerce site. Here's how the pressure got handled, and what it taught about real-world development.",
+    content: `
+       <p>Just two months after writing my first lines of HTML and CSS, I got my first ecommerce client, a local shop wanting to sell products online. I knew zero PHP, zero databases, and definitely zero WordPress. But I said yes anyway. I was terrified.</p>
+        <p>The project seemed simple, product listings, a shopping cart, and a checkout. But with only static HTML and CSS in my toolkit, I had no idea how to handle payments or inventory. Every tutorial I took assumed I knew backend coding. I felt completely stuck.</p>
+        <p>Then I found a YouTube tutorial titled "Build an Ecommerce Site with WordPress, No Coding Needed." That was my lifeline. I followed every step, paused at 2 AM, replayed sections five times. I learned to install WordPress, set up WooCommerce, and customize a theme using my existing CSS knowledge. The HTML I already understood helped me tweak page layouts without breaking things.</p>
+        <p>On delivery day, my heart was pounding. But the client loved it. "It looks professional and it actually works," they said. That moment taught me that you don't need to know everything, you just need to know how to find the right tutorial and adapt what you already know.</p>
+        <p>So to every newbie reading this, don't wait until you master back-end or JavaScript. Start with what you have, even HTML and CSS are enough to build on. WordPress and YouTube will take you the rest of the way.</p>
+      `
+  },
+
+  {
+    id: "digital-marketing",
+    title: "What digital marketing is, and how it grows businesses",
+    category: "Marketing",
+    date: "May 5, 2026",
+    readTime: "7 min read",
+    cover: "https://images.unsplash.com/photo-1562577309-2592ab84b1bc?w=1200&q=80&auto=format&fit=crop",
+    excerpt: "Digital marketing is about trust, visibility, and long-term engagement, not just running ads. A breakdown of SEO, content, and social strategy that actually moves revenue.",
+    content: `
+       <p>Digital marketing isn't just about running ads, it's about building trust, visibility, and long-term engagement. In this post, I will break down SEO, content marketing, social media strategies, and how small businesses have doubled their revenue using the right digital tools.</p>
+        <p>When I first started learning digital marketing, I thought it was all about Facebook ads and Google AdWords. But the real power lies in organic reach. SEO (Search Engine Optimization) helps your website rank higher on Google without paying per click. Content marketing builds authority. Email marketing nurtures leads.</p>
+        <p>I worked with a local fashion brand that was struggling to get online sales. We optimized their product pages, started a blog about fashion tips, and engaged with their audience on Instagram. Within three months, their online revenue increased by 150%.</p>
+        <p>Another client, a tech startup, used our SEO strategy to rank for competitive keywords. They went from page 5 to page 1 in six months. Organic traffic became their main source of leads.</p>
+        <p>The lesson? Digital marketing works when you focus on value, not just promotion. Help your audience, and the sales will follow.</p>
+        <p>If you're a business owner, invest in SEO and content marketing. It's a long-term game, but the returns are sustainable and massive.</p>
+      `
+  }
+
+
+
+
+];
+
+
+
+
+const header = document.getElementById('site-header');
+const toTop = document.getElementById('to-top');
+window.addEventListener('scroll', () => {
+  const y = window.scrollY;
+  header.classList.toggle('scrolled', y > 12);
+  toTop.classList.toggle('show', y > 480);
+}, { passive:true });
+
+
+const menuToggle = document.getElementById('menu-toggle');
+const mobilePanel = document.getElementById('mobile-panel');
+const menuIcon = document.getElementById('menu-icon');
+function closeMenu(){
+  mobilePanel.classList.remove('open');
+  menuToggle.setAttribute('aria-expanded','false');
+  menuIcon.innerHTML = '<line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/>';
+  document.body.style.overflow = '';
+}
+menuToggle.addEventListener('click', () => {
+  const isOpen = mobilePanel.classList.toggle('open');
+  menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  menuIcon.innerHTML = isOpen
+    ? '<line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/>'
+    : '<line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/>';
+  document.body.style.overflow = isOpen ? 'hidden' : '';
+});
+mobilePanel.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+
+
+toTop.addEventListener('click', () => window.scrollTo({ top:0, behavior:'smooth' }));
+
+
+const blogGrid = document.getElementById('blog-grid');
+const filterRow = document.getElementById('filter-row');
+const searchInput = document.getElementById('search-input');
+const listView = document.getElementById('blog-list-view');
+const articleView = document.getElementById('article-view');
+
+let activeCategory = 'All';
+let activeSearch = '';
+
+
+function buildFilters(){
+  const cats = ['All', ...new Set(blogPosts.map(p => p.category))];
+  filterRow.innerHTML = cats.map(c =>
+    `<button class="filter-chip ${c === 'All' ? 'active' : ''}" data-category="${c}">${c}</button>`
+  ).join('');
+  filterRow.querySelectorAll('.filter-chip').forEach(btn => {
+    btn.addEventListener('click', () => {
+      activeCategory = btn.dataset.category;
+      filterRow.querySelectorAll('.filter-chip').forEach(b => b.classList.toggle('active', b === btn));
+      renderBlogList();
+    });
+  });
+}
+
+
+function renderBlogList(){
+  const q = activeSearch.trim().toLowerCase();
+  const filtered = blogPosts.filter(p => {
+    const catOk = activeCategory === 'All' || p.category === activeCategory;
+    const searchOk = !q || p.title.toLowerCase().includes(q) || p.excerpt.toLowerCase().includes(q) || p.category.toLowerCase().includes(q);
+    return catOk && searchOk;
+  });
+
+  if (!filtered.length){
+    blogGrid.innerHTML = `
+      <div class="empty-state">
+        <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <h3>No articles found</h3>
+        <p>Try a different search term or category.</p>
+      </div>`;
+    return;
+  }
+
+  blogGrid.innerHTML = filtered.map(p => `
+    <article class="blog-card" data-id="${p.id}" tabindex="0" role="link" aria-label="${escapeAttr(p.title)}">
+      <img class="blog-card-img" src="${p.cover}" alt="${escapeAttr(p.title)}" loading="lazy">
+      <div class="blog-card-body">
+        <div class="blog-card-meta">
+          <span class="blog-cat">${escapeHtml(p.category)}</span>
+          <span class="blog-date">${escapeHtml(p.date)}</span>
+        </div>
+        <h3>${escapeHtml(p.title)}</h3>
+        <p>${escapeHtml(p.excerpt)}</p>
+        <span class="blog-link">
+          Read the story
+          <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </span>
+      </div>
+    </article>
+  `).join('');
+
+  blogGrid.querySelectorAll('.blog-card').forEach(card => {
+    card.addEventListener('click', () => openArticle(card.dataset.id));
+    card.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openArticle(card.dataset.id); }
+    });
+  });
+}
+
+
+function openArticle(id){
+  const post = blogPosts.find(p => p.id === id);
+  if (!post) return;
+
+  document.getElementById('article-cat').textContent = post.category;
+  document.getElementById('article-date').textContent = post.date;
+  document.getElementById('article-read').textContent = post.readTime;
+  document.getElementById('article-title').textContent = post.title;
+  const cover = document.getElementById('article-cover');
+  cover.src = post.cover;
+  cover.alt = post.title;
+  document.getElementById('article-body').innerHTML = post.content;
+
+  
+  const others = blogPosts.filter(p => p.id !== id);
+  const sameCat = others.filter(p => p.category === post.category);
+  const rest = others.filter(p => p.category !== post.category);
+  const related = [...sameCat, ...rest].slice(0, 3);
+  document.getElementById('related-grid').innerHTML = related.map(p => `
+    <article class="blog-card" data-id="${p.id}" tabindex="0" role="link" aria-label="${escapeAttr(p.title)}">
+      <img class="blog-card-img" src="${p.cover}" alt="${escapeAttr(p.title)}" loading="lazy">
+      <div class="blog-card-body">
+        <div class="blog-card-meta">
+          <span class="blog-cat">${escapeHtml(p.category)}</span>
+          <span class="blog-date">${escapeHtml(p.date)}</span>
+        </div>
+        <h3>${escapeHtml(p.title)}</h3>
+        <p>${escapeHtml(p.excerpt)}</p>
+        <span class="blog-link">
+          Read the story
+          <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </span>
+      </div>
+    </article>
+  `).join('');
+  document.getElementById('related-grid').querySelectorAll('.blog-card').forEach(card => {
+    card.addEventListener('click', () => {
+      openArticle(card.dataset.id);
+      window.scrollTo({ top:0, behavior:'smooth' });
+    });
+  });
+
+  
+  listView.classList.add('hidden');
+  articleView.classList.add('active');
+  window.scrollTo({ top:0, behavior:'auto' });
+  history.replaceState(null, '', `#${post.id}`);
+  document.title = `${post.title} — Kelly Tech Concepts Blog`;
+}
+
+
+function showList(){
+  articleView.classList.remove('active');
+  listView.classList.remove('hidden');
+  document.title = 'Blog — Kelly Tech Concepts Ltd';
+}
+
+
+document.getElementById('back-to-blog').addEventListener('click', (e) => {
+  e.preventDefault();
+  showList();
+  history.replaceState(null, '', 'blog.html');
+});
+window.addEventListener('hashchange', routeFromHash);
+window.addEventListener('popstate', routeFromHash);
+
+
+function routeFromHash(){
+  const hash = window.location.hash.replace('#','');
+  if (hash && blogPosts.some(p => p.id === hash)) {
+    openArticle(hash);
+  } else {
+    showList();
+  }
+}
+
+
+searchInput.addEventListener('input', () => {
+  activeSearch = searchInput.value;
+  renderBlogList();
+});
+
+
+function escapeHtml(s){
+  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+function escapeAttr(s){ return escapeHtml(s); }
+
+
+buildFilters();
+renderBlogList();
+routeFromHash();
+</script>
+</body>
+</html>
