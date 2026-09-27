@@ -21,6 +21,18 @@
     })(document);
   </script>
 
+    <script>
+  function positionSmartSupp(){
+    var m = window.matchMedia('(max-width: 680px)').matches;
+    smartsupp('button:setPosition', {
+      bottom: m ? 78 : 96,
+      right:  m ? 20 : 26
+    });
+  }
+  positionSmartSupp();
+  window.addEventListener('resize', positionSmartSupp);
+</script>
+
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1566148150924797"
      crossorigin="anonymous"></script>
 
