@@ -21,10 +21,10 @@
     })(document);
   </script>
 
-    <script>
+   <script>
   function positionSmartSupp(){
-    var m = window.matchMedia('(max-width: 680px)').matches;
-    smartsupp('button:setPosition', {
+    var m = window.innerWidth < 768;
+    smartsupp('chat:position', {
       bottom: m ? 78 : 96,
       right:  m ? 20 : 26
     });
